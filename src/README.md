@@ -30,7 +30,11 @@ A super simple FastAPI application that allows students to view and sign up for 
 | Method | Endpoint                                                          | Description                                                         |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
-| POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| POST   | `/token`                                                          | Log in and receive a JWT access token                               |
+| POST   | `/register`                                                       | Register a new student account                                      |
+| GET    | `/me`                                                             | Get the currently logged in user profile                            |
+| POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity (requires authentication)                   |
+| DELETE | `/activities/{activity_name}/unregister?email=student@mergington.edu` | Unregister a student from an activity (requires authentication) |
 
 ## Data Model
 
